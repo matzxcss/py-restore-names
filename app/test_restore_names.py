@@ -62,7 +62,12 @@ class TestRestoreName:
             assert user["first_name"] == expected_first_name
             assert user["full_name"] == full_name_expected
 
-    def test_first_name(self, users: list[dict]) -> None:
+    def test_first_name(
+        self,
+        users: list[dict],
+        expected_first_name: str,
+        full_name_expected: str,
+    ) -> None:
         users = [
             {
                 "first_name": None,
